@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="Register" Id="107cfa71-30b8-4bfc-bb42-957e25c775d8" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.0a82c7de-70d2-425e-9068-ba7f22b2618e.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="46eec42e-0d50-40ec-b346-0d42ac742c99" Version="1.1" Url="http://slowrabbit.azurewebsites.net/" ThinkTime="7" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="9b1f70d1-c5c8-4519-a79b-8bf257cb3ff4" Version="1.1" Url="http://slowrabbit.azurewebsites.net/Account/Register" ThinkTime="27" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://slowrabbit.azurewebsites.net/" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="a4c50190-9ce0-453c-be8f-f36a1fc7a40a" Version="1.1" Url="http://slowrabbit.azurewebsites.net/Account/Register" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://slowrabbit.azurewebsites.net/Account/Register" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="74B3mLCQeo8hl9DAOeKmiXHX6c_4XeY8uNw779TyE-82mf-g4eg262tOIog-bTUI3yXZH6sHXsnEe6fN2YY3nS4_6GKftPTxa0qLjQz-_lE1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Email" Value="duygu.s.akman@gmail.com" RecordedValue="duygu.s.akman@gmail.com" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Password" Value="Password.1" RecordedValue="Password.1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ConfirmPassword" Value="Password.1" RecordedValue="Password.1" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+      <RuleParameters>
+        <RuleParameter Name="FindText" Value="already taken" />
+        <RuleParameter Name="IgnoreCase" Value="False" />
+        <RuleParameter Name="UseRegularExpression" Value="False" />
+        <RuleParameter Name="PassIfTextFound" Value="False" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>
