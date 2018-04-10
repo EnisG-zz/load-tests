@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LoadTest Name="Register" Description="" Owner="" storage="c:\users\egunesen\documents\visual studio 2017\projects\loadtests\slowrabbit.mvc.loadtests\register.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="19932543-9f88-4091-9796-993e4b5d297a" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<LoadTest Name="Register" Description="" Owner="" storage="c:\my general git repo\loadtest_mvc_auth_website\slowrabbit.mvc.loadtests\register.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="19932543-9f88-4091-9796-993e4b5d297a" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Scenarios>
     <Scenario Name="Register" DelayBetweenIterations="0" PercentNewUsers="100" IPSwitching="false" TestMixType="PercentageOfTestsStarted" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="Off" />
@@ -436,7 +436,7 @@
         </CounterSetMapping>
       </CounterSetMappings>
       <LoadGeneratorLocations>
-        <GeoLocation Location="Default" Percentage="100" />
+        <GeoLocation Location="West Europe" Percentage="100" />
       </LoadGeneratorLocations>
     </RunConfiguration>
   </RunConfigurations>
